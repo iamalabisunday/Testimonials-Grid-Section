@@ -1,0 +1,154 @@
+:root {
+  /* Colors */
+
+  /* Primary */
+
+  --violet: hsl(263, 55%, 52%);
+  --grayishBlue: hsl(217, 19%, 35%);
+  --blackish-blue: hsl(219, 29%, 14%);
+  --White: hsl(0, 0%, 100%);
+
+  /* Neutral */
+
+  --gray: hsl(0, 0%, 81%);
+  --grayish-blue: hsl(210, 46%, 95%);
+
+  /* Weights */
+  --weight5: 500;
+  --weight6: 600;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--grayish-blue);
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+/* Testimonials content Section */
+
+.testimonials-grid {
+  width: 70rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    "daniel daniel jonathan kira"
+    "jeanette patrick patrick kira";
+}
+
+section {
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+section:last-child {
+  grid-column-start: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.profile-content {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.profile-img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 2.5rem;
+  border: 1px solid var(--gray);
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.35rem;
+}
+
+.name {
+  color: var(--White);
+  font-size: 0.8125rem;
+  font-weight: var(--weight5);
+}
+
+.status {
+  color: var(--gray);
+  font-size: 0.8125rem;
+}
+
+/* Text Section */
+.title-txt {
+  color: var(--White);
+  line-height: 1.8rem;
+  font-size: 1.25rem;
+}
+
+.paragraphic {
+  line-height: 1.5rem;
+  color: var(--gray);
+  font-size: 0.8125rem;
+}
+
+/* Adjustment section */
+.Dainel-data {
+  background-color: var(--violet);
+  grid-area: daniel;
+}
+
+.Jonathan-data {
+  background-color: var(--grayishBlue);
+  grid-area: jonathan;
+}
+
+.Jeanette-data {
+  background-color: var(--White);
+  grid-area: jeanette;
+}
+
+.Kira-data {
+  background-color: var(--White);
+  grid-area: kira;
+}
+
+.name.jeaName,
+.name.kiraName,
+.kiraTitle,
+.JeaTitle {
+  color: var(--grayishBlue);
+}
+
+.paragraphic.JeaPara,
+.paragraphic.KiraPara {
+  color: var(--grayishBlue);
+}
+
+.Patrick-data {
+  background-color: var(--blackish-blue);
+  grid-area: patrick;
+}
+
+@media (max-width: 50em) {
+  .testimonials-grid {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+  }
+}
